@@ -16,8 +16,15 @@ const AddTodo = () => {
   return (
     <div>
       <form onSubmit={addTodoHandler}>
-        <input type="text" name="todo" id="" value={input} />
-        <button>submit</button>
+        <input
+          type="text"
+          name="todo"
+          id=""
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          className="input border bg-gray-200 mr-3"
+        />
+        <button className="btn btn-primary">Submit</button>
       </form>
     </div>
   );

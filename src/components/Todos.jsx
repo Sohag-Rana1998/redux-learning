@@ -7,12 +7,17 @@ const Todos = () => {
   const dispatch = useDispatch();
   return (
     <div>
-      <h2>TODOS</h2>
+      <h2 className="text-xl font-bold">TODOS</h2>
       <ul>
-        {todos.map((todo) => (
-          <li key={todo.id}>
+        {todos?.map((todo) => (
+          <li key={todo.id} className="text-xl font-bold mt-2 border">
             {todo.text}
-            <button onClick={() => dispatch(removeTodo(todo.id))}>X</button>
+            <button
+              className="btn btn-secondary ml-3"
+              onClick={() => dispatch(removeTodo(todo.id))}
+            >
+              X
+            </button>
           </li>
         ))}
       </ul>
